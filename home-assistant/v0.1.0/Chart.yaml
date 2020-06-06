@@ -8,7 +8,7 @@ keywords:
 - hass
 - homeassistant
 home: https://github.com/Cocooning-tech/charts
-icon: file://../logo-home-assistant.svg.webp
+icon: file://../logo-home-assistant.png
 sources:
   - https://github.com/Cocooning-tech/charts
 maintainers:

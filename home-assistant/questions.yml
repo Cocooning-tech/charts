@@ -5,7 +5,7 @@ categories:
 - categorie2
 questions:
 - variable: variable1
-  default: ""
+  default: "valeur1"
   description: "Description variable 1"
   type: string
   label: "Label variable1"

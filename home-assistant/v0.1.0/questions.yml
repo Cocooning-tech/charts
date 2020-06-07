@@ -7,7 +7,8 @@ questions:
 - variable: variable1
   default: "valeur1"
   description: "Description variable 1"
-  type: string
+  type: boolean
+  show_subquestion_if: false
   label: "Label variable1"
   group: "Group 1"
   subquestions:

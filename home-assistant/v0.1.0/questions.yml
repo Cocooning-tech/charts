@@ -12,10 +12,10 @@ questions:
   group: "Group 1"
   subquestions:
   - variable: variable11
-    default: ""
+    default: "valeur11"
     description: "Description variable 11"
     type: string
-    label: "Label variabl11"
+    label: "Label variable11"
     required: true
 - variable: variable2
   default: ""

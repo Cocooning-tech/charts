@@ -5,7 +5,7 @@ categories:
 - categorie2
 questions:
 - variable: variable1
-  default: "valeur1"
+  default: true
   description: "Description variable 1"
   type: boolean
   show_subquestion_if: false

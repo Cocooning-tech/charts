@@ -1,7 +1,7 @@
 labels:
   io.label.var: labeljp
 categories:
-- Catégorie1
+- Categorie1
 - categorie2
 questions:
 - variable: variable1

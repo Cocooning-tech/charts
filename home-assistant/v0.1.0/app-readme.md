@@ -224,5 +224,3 @@ In order to sync the home assistant from a git repo, you have to store a ssh key
 ```console
 kubectl create secret generic git-creds --from-file=id_rsa=git/k8s_id_rsa --from-file=known_hosts=git/known_hosts --from-file=id_rsa.pub=git/k8s_id_rsa.pub
 ```
-
-```

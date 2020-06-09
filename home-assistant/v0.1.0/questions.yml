@@ -23,4 +23,4 @@ questions:
   description: "Description variable 2"
   type: string
   label: "Label variable 2"
-  group: "Group 3"
+  group: "Group 2"

@@ -1,2 +1,3 @@
-# charts
-Cocooning home-assistant
+# Home-assistant
+
+Cocooning README.md

@@ -1,6 +1,6 @@
 # Home Assistant
 
-app-readme.md 2
+app-readme.md 
 
 This is a helm chart for [Home Assistant](https://www.home-assistant.io/)
 

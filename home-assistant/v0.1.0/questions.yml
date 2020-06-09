@@ -1,5 +1,5 @@
 labels:
-  io.label.var: labeljp
+  label.tchube: labeljp
 categories:
 - Categorie1
 - categorie2
@@ -23,4 +23,4 @@ questions:
   description: "Description variable 2"
   type: string
   label: "Label variable 2"
-  group: "Group 2"
+  group: "Group 3"

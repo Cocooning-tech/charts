@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: hello-world
-          image: "hello-world:1.0"
+          image: "hello-world:latest"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http

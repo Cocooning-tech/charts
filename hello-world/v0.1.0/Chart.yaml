@@ -6,7 +6,7 @@ version: 0.1.0
 keywords:
 - hello-world
 home: https://github.com/Cocooning-tech/charts
-icon: https://fr.wikipedia.org/wiki/Fichier:LOGO_helm.png
+icon: https://www.google.com/url?sa=i&url=https%3A%2F%2Fhelm.sh%2F&psig=AOvVaw20VYvNJVtD9GZmea18xhxR&ust=1591893235715000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJC0lMnW9-kCFQAAAAAdAAAAABAE
 sources:
   - https://github.com/Cocooning-tech/charts
 maintainers:

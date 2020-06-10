@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "hello-world.fullname" . }}
+  name: {{ include "hello-world.name" . }}
   labels:
     app.kubernetes.io/name: {{ include "hello-world.name" . }}
     helm.sh/chart: {{ include "hello-world.chart" . }}

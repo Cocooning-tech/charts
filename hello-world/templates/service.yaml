@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: release-name-hello-world
   labels:
-    #app.kubernetes.io/name: {{ include "hello-world.name" . }}
     helm.sh/chart: {{ include "hello-world.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
@@ -15,5 +14,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    #app.kubernetes.io/name: {{ include "hello-world.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

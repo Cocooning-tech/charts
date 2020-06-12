@@ -10,7 +10,7 @@ questions:
   type: boolean
   show_subquestion_if: false
   label: "Label variable1"
-  group: "Group 1"
+  group: "Group 3"
   subquestions:
   - variable: variable11
     default: "valeur11"

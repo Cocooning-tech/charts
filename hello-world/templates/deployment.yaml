@@ -3,20 +3,16 @@ kind: Deployment
 metadata:
   name: release-name-hello-world
   labels:
-    #app.kubernetes.io/name: {{ include "hello-world.name" . }}
-    helm.sh/chart: {{ include "hello-world.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      #app.kubernetes.io/name: {{ include "hello-world.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        #app.kubernetes.io/name: {{ include "hello-world.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
       containers:

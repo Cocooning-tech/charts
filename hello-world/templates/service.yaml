@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: release-name-hello-world
   labels:
-    helm.sh/chart: {{ include "hello-world.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:

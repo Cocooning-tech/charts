@@ -4,10 +4,10 @@ defaultEntryPoints = ["http","https"]
 [entryPoints]
   [entryPoints.http]
   address = ":80"
-    [entryPoints.http.redirect]
-    entryPoint = "https"
+  compress = true
   [entryPoints.https]
   address = ":443"
+  compress = true
     [entryPoints.https.tls]
       [[entryPoints.https.tls.certificates]]
       CertFile = "/ssl/tls.crt"

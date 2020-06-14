@@ -20,7 +20,7 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: httptchube
+            - name: httptc
               containerPort: {{ .Values.service.port }}
               protocol: TCP
       schedulerName: default-scheduler

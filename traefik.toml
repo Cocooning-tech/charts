@@ -14,6 +14,13 @@ defaultEntryPoints = ["http","https"]
       KeyFile = "/ssl/tls.key"
   [entryPoints.prometheus]
   address = ":9100"
+[acme]
+email = "jp.tchube@cocooning.tech"
+storage = "acme.json"
+caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
+entryPoint = "https"
+  [acme.httpChallenge]
+  entryPoint = "http"
 [ping]
 entryPoint = "http"
 [kubernetes]

@@ -34,9 +34,6 @@ entryPoint = "https"
 onHostRule = true
 caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
 [acme.tlsChallenge]
-[[acme.domains]]
-  main = "cocooning.tech"
-  sans = ["verdun.cocooning.tech"]
 [api]
   entryPoint = "traefik"
   dashboard = true

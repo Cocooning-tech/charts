@@ -11,6 +11,6 @@ spec:
     - port: {{ .Values.service.port }}
       targetPort: https
       protocol: TCP
-      name: http
+      name: https
   selector:
     app.kubernetes.io/instance: {{ .Release.Name }}

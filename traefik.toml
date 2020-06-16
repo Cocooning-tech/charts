@@ -21,6 +21,9 @@ caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
 entryPoint = "https"
   [acme.httpChallenge]
   entryPoint = "http"
+[[acme.domains]]
+   main = "*.cocooning.tech"
+   sans = ["00001.cocooning.tech"]
 [ping]
 entryPoint = "http"
 [kubernetes]

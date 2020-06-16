@@ -28,14 +28,12 @@ entryPoint = "http"
 [traefikLog]
   format = "json"
 [acme]
-KeyType = "RSA4096"
 email = "jp.tchube@cocooning.tech"
 storage = "acme.json"
 entryPoint = "https"
 onHostRule = true
 caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
-acmeLogging = true
-  [acme.tlsChallenge]
+[acme.tlsChallenge]
 [[acme.domains]]
   main = "cocooning.tech"
   sans = ["verdun.cocooning.tech"]

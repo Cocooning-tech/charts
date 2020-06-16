@@ -4,26 +4,22 @@ defaultEntryPoints = ["http","https"]
 [entryPoints]
   [entryPoints.http]
   address = ":80"
+  compress = true
     [entryPoints.http.redirect]
-    entryPoint = "https"
+      regex = "^http://(.*)"
+      replacement = "https://$1"
+      permanent = true
   [entryPoints.https]
-  address = ":443"
+  address = ":4443"
+  compress = true
     [entryPoints.https.tls]
       [[entryPoints.https.tls.certificates]]
       CertFile = "/ssl/tls.crt"
       KeyFile = "/ssl/tls.key"
+  [entryPoints.traefik]
+  address = ":8080"
   [entryPoints.prometheus]
   address = ":9100"
-[acme]
-email = "jp.tchube@cocooning.tech"
-storage = "acme.json"
-caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
-entryPoint = "https"
-  [acme.httpChallenge]
-  entryPoint = "http"
-[[acme.domains]]
-   main = "*.cocooning.tech"
-   sans = ["00001.cocooning.tech"]
 [ping]
 entryPoint = "http"
 [kubernetes]
@@ -31,8 +27,21 @@ entryPoint = "http"
   publishedService = "kube-system/traefik"
 [traefikLog]
   format = "json"
+[acme]
+KeyType = "RSA4096"
+email = "jp.tchube@cocooning.tech"
+storage = "acme.json"
+entryPoint = "https"
+onHostRule = true
+caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
+acmeLogging = true
+  [acme.tlsChallenge]
+[[acme.domains]]
+  main = "cocooning.tech"
+  sans = ["verdun.cocooning.tech", "00001.cocooning.tech"]
+[api]
+  entryPoint = "traefik"
+  dashboard = true
 [metrics]
   [metrics.prometheus]
     entryPoint = "prometheus"
-[api]
-  dashboard = true

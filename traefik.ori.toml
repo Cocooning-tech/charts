@@ -24,3 +24,5 @@ entryPoint = "http"
 [metrics]
   [metrics.prometheus]
     entryPoint = "prometheus"
+[api]
+  dashboard = true

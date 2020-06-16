@@ -10,7 +10,7 @@ defaultEntryPoints = ["http","https"]
       replacement = "https://$1"
       permanent = true
   [entryPoints.https]
-  address = ":4443"
+  address = ":443"
   compress = true
     [entryPoints.https.tls]
       [[entryPoints.https.tls.certificates]]
@@ -38,7 +38,7 @@ acmeLogging = true
   [acme.tlsChallenge]
 [[acme.domains]]
   main = "cocooning.tech"
-  sans = ["verdun.cocooning.tech", "00001.cocooning.tech"]
+  sans = ["verdun.cocooning.tech"]
 [api]
   entryPoint = "traefik"
   dashboard = true

@@ -25,14 +25,14 @@ spec:
           name: hassio
           protocol: TCP
         - env:
-          - name: TZ
-            value: Europe/Paris
+          - name: "TZ"
+            value: "Europe/Paris"
         volumeMounts:
-        - mountPath: /config
-          name: vol1
+        - mountPath: "/config"
+          name: "vol1"
       volumes:
         - hostPath:
-            path: /apps
+            path: "/apps"
             type: ""
-          name: vol1
+          name: "vol1"
       schedulerName: default-scheduler

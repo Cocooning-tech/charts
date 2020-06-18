@@ -27,6 +27,17 @@ entryPoint = "http"
   publishedService = "kube-system/traefik"
 [traefikLog]
   format = "json"
+[acme]
+email = "jp.tchube@cocooning.tech"
+storage = "acme.json"
+entryPoint = "https"
+onHostRule = true
+caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
+[acme.tlsChallenge]
+  entryPoint = "https"
+[[acme.domains]]
+  main = "verdun.cocooning.tech"
+  sans = ["verdun.cocooning.tech"]
 [api]
   entryPoint = "traefik"
   dashboard = true

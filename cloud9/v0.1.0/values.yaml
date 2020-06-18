@@ -1,0 +1,8 @@
+replicaCount: 1
+image:
+  repository: "cocooning/raspberrypi4-64-homeassistant"
+  tag: "0.110.0"
+  pullPolicy: IfNotPresent
+service:
+  type: NodePort
+  port: 8080

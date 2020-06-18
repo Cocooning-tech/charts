@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hassio
+  labels:
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+        - containerPort: 8123
+          hostPort: 8123
+          name: hassio
+          protocol: TCP
+        - env:
+          - name: TZ
+            value: Europe/Paris
+        volumeMounts:
+        - mountPath: /config
+          name: vol1
+      volumes:
+        - hostPath:
+            path: /apps
+            type: ""
+          name: vol1
+      schedulerName: default-scheduler

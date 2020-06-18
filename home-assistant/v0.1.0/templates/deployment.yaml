@@ -20,16 +20,16 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-        - containerPort: 8123
-          hostPort: 8123
-          name: hassio
-          protocol: TCP
-        - env:
+          - containerPort: 8123
+            hostPort: 8123
+            name: hassio
+            protocol: TCP
+          env:
           - name: "TZ"
             value: "Europe/Paris"
-        volumeMounts:
-        - mountPath: "/config"
-          name: "vol1"
+          volumeMounts:
+          - mountPath: "/config"
+            name: "vol1"
       volumes:
         - hostPath:
             path: "/apps"

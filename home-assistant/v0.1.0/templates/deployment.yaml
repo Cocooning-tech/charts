@@ -20,8 +20,8 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-          - containerPort: 8123
-            hostPort: 8123
+          - containerPort: {{ .Values.service.port }}
+            hostPort: {{ .Values.service.port }}
             name: hassio
             protocol: TCP
           env:

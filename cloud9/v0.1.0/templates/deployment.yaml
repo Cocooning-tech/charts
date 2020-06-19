@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hassio
+  name: cloud9
   labels:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
@@ -20,19 +20,23 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-          - containerPort: 8123
-            hostPort: 8123
-            name: hassio
+          - containerPort: {{ .Values.service.port }}
+            hostPort: {{ .Values.service.port }}
+            name: cloud9
             protocol: TCP
           env:
+          - name: "PUID"
+            value: "1000"
+          - name: "PGID"
+            value: "1000"
           - name: "TZ"
             value: "Europe/Paris"
           volumeMounts:
-          - mountPath: "/config"
-            name: "vol1"
+          - mountPath: "/code"
+            name: "vol2"
       volumes:
         - hostPath:
             path: "/apps"
             type: ""
-          name: "vol1"
+          name: "vol2"
       schedulerName: default-scheduler

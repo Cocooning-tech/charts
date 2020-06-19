@@ -1,8 +1,8 @@
 replicaCount: 1
 image:
-  repository: "cocooning/raspberrypi4-64-homeassistant"
-  tag: "0.110.0"
+  repository: "linuxserver/cloud9"
+  tag: "arm64v8-1.26.0-ls42"
   pullPolicy: IfNotPresent
 service:
   type: NodePort
-  port: 8080
+  port: 8000

@@ -10,7 +10,7 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: whoami
+          serviceName: {{ .serviceName }}
           servicePort: 80
         path: /whoami
         pathType: ImplementationSpecific

@@ -2,8 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: whoami
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+  namespace: default
 spec:
   rules:
   - host: verdun.cocooning.tech

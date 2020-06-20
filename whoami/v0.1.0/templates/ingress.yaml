@@ -8,6 +8,7 @@ spec:
     http:
       paths:
       - backend:
+          serviceName: ingress-whoami
           servicePort: 80
         path: /whoami
         pathType: ImplementationSpecific

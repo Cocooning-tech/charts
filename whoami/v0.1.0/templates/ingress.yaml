@@ -2,15 +2,13 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: whoami
-  annotations:
-    kubernetes.io/ingress.class: traefik
 spec:
   rules:
   - host: verdun.cocooning.tech
     http:
       paths:
       - backend:
-          serviceName: whoami
+          serviceName: {{ $fullName }}
           servicePort: 80
         path: /whoami
         pathType: ImplementationSpecific

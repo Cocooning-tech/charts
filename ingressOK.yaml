@@ -1,0 +1,57 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    field.cattle.io/creatorId: user-zd47w
+    field.cattle.io/ingressState: '{"d2hvYW1pL3dob2FtaS1wLTQya213L3ZlcmR1bi5jb2Nvb25pbmcudGVjaC8vd2hvYW1pLzgw":"deployment:whoami-p-42kmw:whoami"}'
+    field.cattle.io/publicEndpoints: '[{"addresses":["192.168.1.71"],"port":80,"protocol":"HTTP","serviceName":"whoami-p-42kmw:ingress-70841160d012793e037422cb09156c64","ingressName":"whoami-p-42kmw:whoami","hostname":"verdun.cocooning.tech","path":"/whoami","allNodes":false}]'
+  creationTimestamp: "2020-06-20T09:26:21Z"
+  generation: 1
+  labels:
+    cattle.io/creator: norman
+  managedFields:
+  - apiVersion: extensions/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:field.cattle.io/creatorId: {}
+          f:field.cattle.io/ingressState: {}
+          f:field.cattle.io/publicEndpoints: {}
+        f:labels:
+          .: {}
+          f:cattle.io/creator: {}
+      f:spec:
+        f:rules: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2020-06-20T09:26:21Z"
+  - apiVersion: extensions/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:loadBalancer:
+          f:ingress: {}
+    manager: traefik
+    operation: Update
+    time: "2020-06-20T09:26:21Z"
+  name: whoami
+  namespace: whoami-p-42kmw
+  resourceVersion: "138335"
+  selfLink: /apis/extensions/v1beta1/namespaces/whoami-p-42kmw/ingresses/whoami
+  uid: c75a2478-cb53-4924-b3f6-daa3d519d357
+spec:
+  rules:
+  - host: verdun.cocooning.tech
+    http:
+      paths:
+      - backend:
+          serviceName: ingress-70841160d012793e037422cb09156c64
+          servicePort: 80
+        path: /whoami
+        pathType: ImplementationSpecific
+status:
+  loadBalancer:
+    ingress:
+    - ip: 192.168.1.71

@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: whoami
@@ -6,11 +6,11 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: verdun.coconning.tech
+  - host: verdun.cocooning.tech
     http:
       paths:
-      - path: /whoami
-        pathType: Prefix
-        backend:
+      - backend:
           serviceName: whoami
           servicePort: 80
+        path: /whoami
+        pathType: ImplementationSpecific

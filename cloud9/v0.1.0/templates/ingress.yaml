@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: hassio
+  name: cloud9
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -10,7 +10,7 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: hassio
+          serviceName: cloud9
           servicePort: 8000
-        path: /hassio
+        path: /cloud9
         pathType: ImplementationSpecific

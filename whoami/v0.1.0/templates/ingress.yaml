@@ -10,6 +10,5 @@ spec:
       - backend:
           serviceName: whoami
           servicePort: 80
-        weight: 1
         path: /whoami
         pathType: ImplementationSpecific

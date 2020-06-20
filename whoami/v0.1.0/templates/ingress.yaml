@@ -3,14 +3,14 @@ kind: Ingress
 metadata:
   name: whoami
   annotations:
-    kubernetes.io/ingress.class: traefik
+    kubernetes.io/ingress.class: "traefik"
 spec:
   rules:
-  - host: verdun.cocooning.tech
+  - host: "verdun.cocooning.tech"
     http:
       paths:
       - backend:
-          serviceName: {{ .Release.Service }}
+          serviceName: "whoami"
           servicePort: 80
-        path: /whoami
+        path: "/whoami"
         pathType: ImplementationSpecific

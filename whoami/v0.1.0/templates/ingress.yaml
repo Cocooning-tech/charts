@@ -7,10 +7,10 @@ metadata:
 spec:
   rules:
   - host: verdun.coconning.tech
-    - http:
-        paths:
-        - path: /whoami
-          pathType: Prefix
-          backend:
-            serviceName: whoami
-            servicePort: 80
+    http:
+      paths:
+      - path: /whoami
+        pathType: Prefix
+        backend:
+          serviceName: whoami
+          servicePort: 80

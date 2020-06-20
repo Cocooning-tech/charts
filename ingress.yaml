@@ -4,8 +4,6 @@ metadata:
   name: whoami
   annotations:
     kubernetes.io/ingress.class: traefik
-    meta.helm.sh/release-name: whoami-p-42kmw
-    meta.helm.sh/release-namespace: whoami-p-42kmw
 spec:
   rules:
   - host: verdun.cocooning.tech

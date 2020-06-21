@@ -7,6 +7,7 @@ metadata:
     controller: true
     kind: Ingress
     name: whoami
+    uid: 2728c419-abef-497a-ae48-c487c1e94753
   labels:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}

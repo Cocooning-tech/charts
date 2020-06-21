@@ -40,7 +40,7 @@ metadata:
   name: whoami
   namespace: whoami-p-sghpk
 spec:
-  clusterIP: 10.43.173.109
+  clusterIP: 10.43.173.110
   ports:
   - name: whoami
     port: 80

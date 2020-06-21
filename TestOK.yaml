@@ -1,0 +1,67 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    field.cattle.io/targetWorkloadIds: '["deployment:whoami-p-sghpk:whoami"]'
+  creationTimestamp: "2020-06-21T06:03:48Z"
+  labels:
+    cattle.io/creator: norman
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:field.cattle.io/targetWorkloadIds: {}
+        f:labels:
+          .: {}
+          f:cattle.io/creator: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"2728c419-abef-497a-ae48-c487c1e94753"}:
+            .: {}
+            f:apiVersion: {}
+            f:controller: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:spec:
+        f:ports:
+          .: {}
+          k:{"port":80,"protocol":"TCP"}:
+            .: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:workloadID_ingress-0053021a41b215d2ae0ed84378484654: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2020-06-21T06:03:48Z"
+  name: ingress-0053021a41b215d2ae0ed84378484654
+  namespace: whoami-p-sghpk
+  ownerReferences:
+  - apiVersion: v1beta1/extensions
+    controller: true
+    kind: Ingress
+    name: whoami
+    uid: 2728c419-abef-497a-ae48-c487c1e94753
+  resourceVersion: "32985"
+  selfLink: /api/v1/namespaces/whoami-p-sghpk/services/ingress-0053021a41b215d2ae0ed84378484654
+  uid: 615101ae-9ed6-45f1-8e68-3ed643515e69
+spec:
+  clusterIP: 10.43.77.109
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    workloadID_ingress-0053021a41b215d2ae0ed84378484654: "true"
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

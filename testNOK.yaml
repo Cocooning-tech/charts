@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-06-21T05:59:10Z"
+  labels:
+    app.kubernetes.io/instance: whoami-p-sghpk
+    app.kubernetes.io/managed-by: Tiller
+    io.cattle.field/appId: whoami-p-sghpk
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:io.cattle.field/appId: {}
+      f:spec:
+        f:ports:
+          .: {}
+          k:{"port":80,"protocol":"TCP"}:
+            .: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:workloadID_ingress-whoami: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2020-06-21T05:59:10Z"
+  name: whoami
+  namespace: whoami-p-sghpk
+  resourceVersion: "32756"
+  selfLink: /api/v1/namespaces/whoami-p-sghpk/services/whoami
+  uid: db1d1a6a-0c65-45e7-8566-29ad17726655
+spec:
+  clusterIP: 10.43.253.224
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app.kubernetes.io/instance: whoami-p-sghpk
+    workloadID_ingress-whoami: "true"
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

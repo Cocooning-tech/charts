@@ -29,7 +29,7 @@ metadata:
         f:loadBalancer:
           f:ingress: {}
     manager: traefik
-    operation: Update
+    operation: Apply
 spec:
   rules:
   - host: verdun.cocooning.tech

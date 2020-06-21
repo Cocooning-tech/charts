@@ -2,12 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    field.cattle.io/ipAddresses: "null"
-    field.cattle.io/targetDnsRecordIds: "null"
     field.cattle.io/targetWorkloadIds: '["deployment:whoami-p-sghpk:whoami"]'
-  creationTimestamp: "2020-06-21T16:58:33Z"
+  creationTimestamp: "2020-06-21T17:18:14Z"
   labels:
-    io.cattle.field/appId: whoami-p-sghpk
+    cattle.io/creator: norman
   managedFields:
   - apiVersion: v1
     fieldsType: FieldsV1
@@ -15,44 +13,54 @@ metadata:
       f:metadata:
         f:annotations:
           .: {}
-          f:field.cattle.io/ipAddresses: {}
-          f:field.cattle.io/targetDnsRecordIds: {}
           f:field.cattle.io/targetWorkloadIds: {}
         f:labels:
           .: {}
-          f:io.cattle.field/appId: {}
+          f:cattle.io/creator: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"07c7780a-0c43-4434-90c6-171e68068994"}:
+            .: {}
+            f:apiVersion: {}
+            f:controller: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
       f:spec:
-        f:clusterIP: {}
         f:ports:
           .: {}
           k:{"port":80,"protocol":"TCP"}:
             .: {}
-            f:name: {}
             f:port: {}
             f:protocol: {}
             f:targetPort: {}
         f:selector:
           .: {}
-          f:workloadID_whoami: {}
+          f:workloadID_ingress-0053021a41b215d2ae0ed84378484654: {}
         f:sessionAffinity: {}
         f:type: {}
     manager: Go-http-client
     operation: Update
-    time: "2020-06-21T17:00:19Z"
-  name: whoami
+    time: "2020-06-21T17:18:14Z"
+  name: ingress-0053021a41b215d2ae0ed84378484654
   namespace: whoami-p-sghpk
-  resourceVersion: "62790"
-  selfLink: /api/v1/namespaces/whoami-p-sghpk/services/whoami
-  uid: 7d8d74a2-f789-427e-8e9e-187ae92419e6
+  ownerReferences:
+  - apiVersion: v1beta1/extensions
+    controller: true
+    kind: Ingress
+    name: whoami
+    uid: 07c7780a-0c43-4434-90c6-171e68068994
+  resourceVersion: "63815"
+  selfLink: /api/v1/namespaces/whoami-p-sghpk/services/ingress-0053021a41b215d2ae0ed84378484654
+  uid: afe16c8a-865b-42f7-9fee-f053f3c98eb7
 spec:
-  clusterIP: None
+  clusterIP: 10.43.173.109
   ports:
-  - name: whoami
-    port: 80
+  - port: 80
     protocol: TCP
     targetPort: 80
   selector:
-    workloadID_whoami: "true"
+    workloadID_ingress-0053021a41b215d2ae0ed84378484654: "true"
   sessionAffinity: None
   type: ClusterIP
 status:

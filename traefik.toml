@@ -5,10 +5,6 @@ defaultEntryPoints = ["http","https"]
   [entryPoints.http]
   address = ":80"
   compress = true
-    [entryPoints.http.redirect]
-      regex = "^http://(.*)"
-      replacement = "https://$1"
-      permanent = true
   [entryPoints.https]
   address = ":443"
   compress = true
@@ -16,8 +12,6 @@ defaultEntryPoints = ["http","https"]
       [[entryPoints.https.tls.certificates]]
       CertFile = "/ssl/tls.crt"
       KeyFile = "/ssl/tls.key"
-  [entryPoints.traefik]
-  address = ":8080"
   [entryPoints.prometheus]
   address = ":9100"
 [ping]
@@ -27,9 +21,8 @@ entryPoint = "http"
   publishedService = "kube-system/traefik"
 [traefikLog]
   format = "json"
-[api]
-  entryPoint = "traefik"
-  dashboard = true
 [metrics]
   [metrics.prometheus]
     entryPoint = "prometheus"
+[api]
+  dashboard = true

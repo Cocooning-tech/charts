@@ -11,9 +11,9 @@ spec:
   clusterIP: None
   ports:
   - name: default
-    port: 42
+    port: 80
     protocol: TCP
-    targetPort: 42
+    targetPort: 80
   selector:
     workloadID_whoami: "true"
   sessionAffinity: None

@@ -10,7 +10,7 @@ metadata:
 spec:
   clusterIP: None
   ports:
-  - name: default
+  - name: whoami
     port: 80
     protocol: TCP
     targetPort: 80

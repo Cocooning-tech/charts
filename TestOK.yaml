@@ -5,7 +5,7 @@ metadata:
     field.cattle.io/ipAddresses: "null"
     field.cattle.io/targetDnsRecordIds: "null"
     field.cattle.io/targetWorkloadIds: '["deployment:whoami-p-sghpk:whoami"]'
-  creationTimestamp: "2020-06-21T16:23:36Z"
+  creationTimestamp: "2020-06-21T16:58:33Z"
   labels:
     io.cattle.field/appId: whoami-p-sghpk
   managedFields:
@@ -38,16 +38,16 @@ metadata:
         f:type: {}
     manager: Go-http-client
     operation: Update
-    time: "2020-06-21T16:28:42Z"
+    time: "2020-06-21T17:00:19Z"
   name: whoami
   namespace: whoami-p-sghpk
-  resourceVersion: "60984"
+  resourceVersion: "62790"
   selfLink: /api/v1/namespaces/whoami-p-sghpk/services/whoami
-  uid: f6e39e8e-50e9-4669-bf37-55ded1cbeca0
+  uid: 7d8d74a2-f789-427e-8e9e-187ae92419e6
 spec:
   clusterIP: None
   ports:
-  - name: default
+  - name: whoami
     port: 80
     protocol: TCP
     targetPort: 80

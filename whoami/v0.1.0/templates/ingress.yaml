@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: whoami
@@ -6,16 +6,6 @@ metadata:
   labels:
     io.cattle.field/appId: whoami-p-sghpk
   managedFields:
-  - apiVersion: networking.k8s.io/v1beta1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:labels:
-          .: {}
-          f:io.cattle.field/appId: {}
-    manager: Go-http-client
-    operation: Update
-    time: "2020-06-21T15:49:41Z"
   - apiVersion: extensions/v1beta1
     fieldsType: FieldsV1
     fieldsV1:
@@ -24,20 +14,6 @@ metadata:
           f:ingress: {}
     manager: traefik
     operation: Update
-    time: "2020-06-21T15:49:41Z"
-  - apiVersion: extensions/v1beta1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          .: {}
-          f:field.cattle.io/ingressState: {}
-          f:field.cattle.io/publicEndpoints: {}
-      f:spec:
-        f:rules: {}
-    manager: Go-http-client
-    operation: Update
-    time: "2020-06-21T15:51:16Z"
 spec:
   rules:
   - host: verdun.cocooning.tech

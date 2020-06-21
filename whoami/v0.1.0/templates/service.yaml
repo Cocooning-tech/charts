@@ -4,7 +4,7 @@ metadata:
   annotations:
     field.cattle.io/ipAddresses: "null"
     field.cattle.io/targetDnsRecordIds: "null"
-    field.cattle.io/targetWorkloadIds: '["deployment:whoami-p-sghpk:whoami"]'
+    field.cattle.io/targetWorkloadIds: '["deployment:{{ .Release.Name }}:whoami"]'
   name: whoami
   namespace: {{ .Release.Name }}
 spec:

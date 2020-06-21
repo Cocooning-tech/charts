@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: whoami
+  name: ingress-0053021a41b215d2ae0ed84378484654
   ownerReferences:
   - apiVersion: v1beta1/extensions
     controller: true
@@ -11,26 +11,6 @@ metadata:
   labels:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
-  managedFields:
-  - apiVersion: v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:metadata:
-        f:annotations:
-          .: {}
-          f:field.cattle.io/targetWorkloadIds: {}
-        f:labels:
-          .: {}
-          f:cattle.io/creator: {}
-        f:ownerReferences:
-          .: {}
-          k:{"uid":"2728c419-abef-497a-ae48-c487c1e94753"}:
-            .: {}
-            f:apiVersion: {}
-            f:controller: {}
-            f:kind: {}
-            f:name: {}
-            f:uid: {}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -39,4 +19,4 @@ spec:
       protocol: TCP
   selector:
     app.kubernetes.io/instance: {{ .Release.Name }}
-    workloadID_ingress-whoami: "true"
+    workloadID_ingress-0053021a41b215d2ae0ed84378484654: "true"

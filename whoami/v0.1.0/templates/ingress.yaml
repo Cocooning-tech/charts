@@ -2,9 +2,9 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: whoami
-  namespace: whoami-p-sghpk
+  namespace: {{ .Release.Name }}
   labels:
-    io.cattle.field/appId: whoami-p-sghpk
+    io.cattle.field/appId: {{ .Release.Name }}
   managedFields:
   - apiVersion: extensions/v1beta1
     fieldsType: FieldsV1

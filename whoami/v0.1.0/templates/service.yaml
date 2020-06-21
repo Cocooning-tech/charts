@@ -11,10 +11,10 @@ spec:
   clusterIP: None
   ports:
   - name: default
-    port: 80
+    port: {{ .Values.service.port }}
     protocol: TCP
-    targetPort: 80
+    targetPort: {{ .Values.service.port }}
   selector:
     workloadID_whoami: "true"
   sessionAffinity: None
-  type: ClusterIP
+  type: {{ .Values.service.type }}

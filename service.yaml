@@ -4,6 +4,12 @@ metadata:
   name: whoami
   labels:
     cattle.io/creator: norman
+  ownerReferences:
+  - apiVersion: v1beta1/extensions
+    controller: true
+    kind: Ingress
+    name: test
+    uid: d5f46b4f-c50c-43df-a856-b94fc042bbca
 spec:
   type: {{ .Values.service.type }}
   ports:

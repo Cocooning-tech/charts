@@ -5,7 +5,6 @@ metadata:
     field.cattle.io/ipAddresses: "null"
     field.cattle.io/targetDnsRecordIds: "null"
     field.cattle.io/targetWorkloadIds: '["deployment:whoami-p-sghpk:whoami"]'
-  creationTimestamp: "2020-06-21T17:30:21Z"
   labels:
     io.cattle.field/appId: whoami-p-sghpk
   managedFields:

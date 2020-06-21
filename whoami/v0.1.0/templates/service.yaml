@@ -6,15 +6,15 @@ metadata:
     field.cattle.io/targetDnsRecordIds: "null"
     field.cattle.io/targetWorkloadIds: '["deployment:whoami-p-sghpk:whoami"]'
   name: whoami
-  namespace: {{ .Release.Name }}
+  namespace: whoami-p-sghpk
 spec:
   clusterIP: None
   ports:
-  - name: whoami
-    port: {{ .Values.service.port }}
+  - name: default
+    port: 80
     protocol: TCP
-    targetPort: {{ .Values.service.port }}
+    targetPort: 80
   selector:
     workloadID_whoami: "true"
   sessionAffinity: None
-  type: {{ .Values.service.type }}
+  type: ClusterIP

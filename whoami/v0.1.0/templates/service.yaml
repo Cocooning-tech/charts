@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    field.cattle.io/targetWorkloadIds: '["deployment:whoami:whoami"]'
+    field.cattle.io/targetWorkloadIds: '["deployment:default:workloadwhoami"]'
     workload.cattle.io/targetWorkloadIdNoop: "true"
     workload.cattle.io/workloadPortBased: "true"
-  creationTimestamp: "2020-06-22T07:45:49Z"
+  creationTimestamp: "2020-06-22T08:02:59Z"
   labels:
     cattle.io/creator: norman
   managedFields:
@@ -23,7 +23,7 @@ metadata:
           f:cattle.io/creator: {}
         f:ownerReferences:
           .: {}
-          k:{"uid":"e21516a7-4338-4d3b-8d62-f34a07bb7801"}:
+          k:{"uid":"a3324833-2f1f-4f92-84e8-9ae51e62ea09"}:
             .: {}
             f:apiVersion: {}
             f:controller: {}
@@ -32,14 +32,7 @@ metadata:
             f:uid: {}
       f:spec:
         f:clusterIP: {}
-        f:ports:
-          .: {}
-          k:{"port":42,"protocol":"TCP"}:
-            .: {}
-            f:name: {}
-            f:port: {}
-            f:protocol: {}
-            f:targetPort: {}
+        f:ports: {}
         f:selector:
           .: {}
           f:workload.user.cattle.io/workloadselector: {}
@@ -47,18 +40,32 @@ metadata:
         f:type: {}
     manager: Go-http-client
     operation: Apply
-    time: "2020-06-22T07:45:49Z"
-  name: whoami
-  namespace: whoami
+    time: "2020-06-22T08:02:59Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:ports:
+          k:{"port":80,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+    manager: Mozilla
+    operation: Apply
+    time: "2020-06-22T08:08:05Z"
+  name: workloadwhoami
+  namespace: default
   ownerReferences:
   - apiVersion: apps/v1beta2
     controller: true
     kind: deployment
-    name: whoami
-    uid: e21516a7-4338-4d3b-8d62-f34a07bb7801
-  resourceVersion: "101603"
-  selfLink: /api/v1/namespaces/whoami/services/whoami
-  uid: 50851e67-3ec8-4521-9e9f-291fe0af3884
+    name: workloadwhoami
+    uid: a3324833-2f1f-4f92-84e8-9ae51e62ea09
+  resourceVersion: "102819"
+  selfLink: /api/v1/namespaces/default/services/workloadwhoami
+  uid: 3489d420-dd91-4b0f-83ae-0444c5633fa5
 spec:
   clusterIP: None
   ports:
@@ -67,7 +74,7 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    workload.user.cattle.io/workloadselector: deployment-whoami-whoami
+    workload.user.cattle.io/workloadselector: deployment-default-workloadwhoami
   sessionAffinity: None
   type: ClusterIP
 status:

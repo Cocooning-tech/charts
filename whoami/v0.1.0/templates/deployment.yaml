@@ -4,11 +4,11 @@ metadata:
   annotations:
     deployment.kubernetes.io/revision: "1"
     field.cattle.io/creatorId: user-hfxbj
-  creationTimestamp: "2020-06-22T07:42:53Z"
+  creationTimestamp: "2020-06-22T08:02:59Z"
   generation: 1
   labels:
     cattle.io/creator: norman
-    workload.user.cattle.io/workloadselector: deployment-whoami-whoami
+    workload.user.cattle.io/workloadselector: deployment-default-workloadwhoami
   managedFields:
   - apiVersion: apps/v1
     fieldsType: FieldsV1
@@ -45,7 +45,7 @@ metadata:
               f:workload.user.cattle.io/workloadselector: {}
           f:spec:
             f:containers:
-              k:{"name":"whoami"}:
+              k:{"name":"workloadwhoami"}:
                 .: {}
                 f:image: {}
                 f:imagePullPolicy: {}
@@ -69,7 +69,7 @@ metadata:
             f:terminationGracePeriodSeconds: {}
     manager: Go-http-client
     operation: Apply
-    time: "2020-06-22T07:42:53Z"
+    time: "2020-06-22T08:02:59Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -102,19 +102,19 @@ metadata:
         f:updatedReplicas: {}
     manager: k3s
     operation: Apply
-    time: "2020-06-22T07:42:57Z"
-  name: whoami
-  namespace: whoami
-  resourceVersion: "101468"
-  selfLink: /apis/apps/v1/namespaces/whoami/deployments/whoami
-  uid: aa2ef9c4-a727-4ec8-a54c-e66d1e4a7cbf
+    time: "2020-06-22T08:03:03Z"
+  name: workloadwhoami
+  namespace: default
+  resourceVersion: "102606"
+  selfLink: /apis/apps/v1/namespaces/default/deployments/workloadwhoami
+  uid: a3324833-2f1f-4f92-84e8-9ae51e62ea09
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      workload.user.cattle.io/workloadselector: deployment-whoami-whoami
+      workload.user.cattle.io/workloadselector: deployment-default-workloadwhoami
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -123,15 +123,15 @@ spec:
   template:
     metadata:
       annotations:
-        cattle.io/timestamp: "2020-06-22T07:42:54Z"
+        cattle.io/timestamp: "2020-06-22T08:03:00Z"
       creationTimestamp: null
       labels:
-        workload.user.cattle.io/workloadselector: deployment-whoami-whoami
+        workload.user.cattle.io/workloadselector: deployment-default-workloadwhoami
     spec:
       containers:
       - image: containous/whoami:latest
         imagePullPolicy: Always
-        name: whoami
+        name: workloadwhoami
         resources: {}
         securityContext:
           allowPrivilegeEscalation: false
@@ -151,15 +151,15 @@ spec:
 status:
   availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2020-06-22T07:42:57Z"
-    lastUpdateTime: "2020-06-22T07:42:57Z"
+  - lastTransitionTime: "2020-06-22T08:03:03Z"
+    lastUpdateTime: "2020-06-22T08:03:03Z"
     message: Deployment has minimum availability.
     reason: MinimumReplicasAvailable
     status: "True"
     type: Available
-  - lastTransitionTime: "2020-06-22T07:42:53Z"
-    lastUpdateTime: "2020-06-22T07:42:57Z"
-    message: ReplicaSet "whoami-54c9d7767" has successfully progressed.
+  - lastTransitionTime: "2020-06-22T08:02:59Z"
+    lastUpdateTime: "2020-06-22T08:03:03Z"
+    message: ReplicaSet "workloadwhoami-5d6b567944" has successfully progressed.
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing

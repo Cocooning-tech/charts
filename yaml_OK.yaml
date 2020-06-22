@@ -70,7 +70,7 @@ metadata:
             f:securityContext: {}
             f:terminationGracePeriodSeconds: {}
     manager: Go-http-client
-    operation: Apply
+    operation: Update
     time: "2020-06-22T07:36:05Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
@@ -103,7 +103,7 @@ metadata:
         f:replicas: {}
         f:updatedReplicas: {}
     manager: k3s
-    operation: Apply
+    operation: Update
     time: "2020-06-22T07:36:08Z"
   name: whoami
   namespace: default

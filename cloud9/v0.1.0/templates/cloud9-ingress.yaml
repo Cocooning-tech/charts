@@ -10,4 +10,4 @@ spec:
       - path: /cloud9
         backend:
           serviceName: {{ .Chart.Name }}
-          servicePort: 80
+          servicePort: 8000

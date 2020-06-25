@@ -4,7 +4,7 @@ metadata:
   name: {{ .Chart.Name }}
   annotations:
     kubernetes.io/ingress.class: traefik
-    traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
+    traefik.ingress.kubernetes.io/rule-type: PathPrefix
 spec:
   rules:
   - host: "verdun.cocooning.tech"

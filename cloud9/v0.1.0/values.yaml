@@ -4,5 +4,5 @@ image:
   tag: "arm64v8-1.26.0-ls42"
   pullPolicy: IfNotPresent
 service:
-  type: NodePort
+  type: ClusterIP
   port: 8000

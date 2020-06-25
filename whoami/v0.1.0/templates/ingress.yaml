@@ -9,5 +9,5 @@ spec:
       paths:
       - path: /whoami
         backend:
-          serviceName: {{ .Release.Name }}
+          serviceName: {{ .Chart.Name }}
           servicePort: {{ .Values.service.port }}

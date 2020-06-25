@@ -13,4 +13,4 @@ spec:
       - path: /cloud
         backend:
           serviceName: {{ .Chart.Name }}
-          servicePort: http
+          servicePort: {{ .Values.service.port }}

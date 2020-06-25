@@ -4,7 +4,7 @@ metadata:
   name: {{ .Chart.Name }}
   annotations:
     kubernetes.io/ingress.class: traefik
-    traefik.ingress.kubernetes.io/request-modifier: AddPrefix: /cloud
+    traefik.ingress.kubernetes.io/request-modifier: AddPrefix: /users
 spec:
   rules:
   - host: "verdun.cocooning.tech"

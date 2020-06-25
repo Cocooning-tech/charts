@@ -4,7 +4,7 @@ metadata:
   labels:
     app: {{ .Release.Name }}
   name: {{ .Chart.Name }}
-  namespace: {{ .Namespace.Name }}
+  namespace: {{ .Release.Name }}
 spec:
   replicas: 1
   selector:

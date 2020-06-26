@@ -5,6 +5,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: traefik
     traefik.frontend.rule.type: PathPrefixStrip
+    traefik.ingress.kubernetes.io/request-modifier: AddPrefix: /users
 spec:
   rules:
   - host: "verdun.cocooning.tech"

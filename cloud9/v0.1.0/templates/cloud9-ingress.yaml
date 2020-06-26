@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: {{ .Release.Name }}
   annotations:
-    kubernetes.io/ingress.class: traefik
+    #kubernetes.io/ingress.class: traefik
     #traefik.frontend.rule.type: PathPrefixStrip
     #traefik.ingress.kubernetes.io/rewrite-target: /cloud9
 spec:
@@ -14,4 +14,4 @@ spec:
       - path: /
         backend:
           serviceName: {{ .Release.Name }}
-          servicePort: port-1
+          servicePort: port-cloud9

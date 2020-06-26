@@ -6,7 +6,7 @@ metadata:
   name: {{ .Release.Name }}
 spec:
   ports:
-  - name: port-1
+  - name: port-cloud9
     port: {{ .Values.service.port }}
     protocol: TCP
     targetPort: {{ .Values.service.port }}

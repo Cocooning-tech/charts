@@ -3,10 +3,10 @@ kind: Service
 metadata:
   labels:
     app: {{ .Release.Name }}
-  name: {{ .Release.Name }}
+  name: {{ .Chart.Name }}
 spec:
   ports:
-  - name: port-cloud9
+  - name: port-2
     port: {{ .Values.service.port }}
     protocol: TCP
     targetPort: {{ .Values.service.port }}

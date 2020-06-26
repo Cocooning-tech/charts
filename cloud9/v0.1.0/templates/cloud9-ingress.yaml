@@ -3,9 +3,6 @@ kind: Ingress
 metadata:
   name: {{ .Chart.Name }}
   namespace: {{ .Release.Name }}
-  annotations:
-    traefik.frontend.passHostHeader: "true"
-    traefik.backend.loadbalancer.sticky: "true"
 spec:
   rules:
   - host: verdun.cocooning.tech

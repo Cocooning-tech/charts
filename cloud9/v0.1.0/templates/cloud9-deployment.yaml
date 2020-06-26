@@ -18,3 +18,18 @@ spec:
       containers:
       - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         name: {{ .Chart.Name }}
+        env:
+        - name: "TZ"
+          value: "Europe/Paris"
+        - name: "PUID"
+          value: "1000"
+        - name: "PGID"
+          value: "1000"
+        volumeMounts:
+        - mountPath: "/code"
+          name: "vol1"
+    volumes:
+      - hostPath:
+          path: "/apps"
+          type: ""
+        name: "vol1"

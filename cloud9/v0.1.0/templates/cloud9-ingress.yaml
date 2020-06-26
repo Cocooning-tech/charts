@@ -2,12 +2,17 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ .Chart.Name }}
+  namespace: {{ .Release.Name }}
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+    traefik.frontend.passHostHeader: "true"
+    traefik.backend.loadbalancer.sticky: "true"
 spec:
   rules:
   - host: verdun.cocooning.tech
     http:
       paths:
-      - path: 
+      - path: /
         backend:
           serviceName: {{ .Chart.Name }}
           servicePort: {{ .Values.service.port }}

@@ -4,10 +4,10 @@ metadata:
   name: {{ .Chart.Name }}
 spec:
   rules:
-  - host: "verdun.cocooning.tech"
+  - host: verdun.cocooning.tech
     http:
       paths:
-      - path: /
+      - path: 
         backend:
           serviceName: {{ .Chart.Name }}
           servicePort: {{ .Values.service.port }}

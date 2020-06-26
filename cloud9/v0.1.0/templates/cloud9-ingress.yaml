@@ -4,14 +4,14 @@ metadata:
   name: {{ .Chart.Name }}
   annotations:
     kubernetes.io/ingress.class: traefik
-    traefik.frontend.rule.type: PathPrefixStrip
-    traefik.ingress.kubernetes.io/request-modifier: AddPrefix: /users
+    #traefik.frontend.rule.type: PathPrefixStrip
+    #traefik.ingress.kubernetes.io/request-modifier: AddPrefix: /cloud9
 spec:
   rules:
   - host: "verdun.cocooning.tech"
     http:
       paths:
-      - path: /
+      - path: /cloud9
         backend:
           serviceName: {{ .Chart.Name }}
           servicePort: {{ .Values.service.port }}

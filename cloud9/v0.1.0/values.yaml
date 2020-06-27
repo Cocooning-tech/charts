@@ -5,4 +5,4 @@ image:
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP
-  port: 8001
+  port: 8000

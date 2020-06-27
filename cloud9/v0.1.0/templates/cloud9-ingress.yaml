@@ -10,4 +10,4 @@ spec:
       - path:
         backend:
           serviceName: {{ .Chart.Name }}
-          servicePort: {{ .Values.service.port }}
+          servicePort: 80

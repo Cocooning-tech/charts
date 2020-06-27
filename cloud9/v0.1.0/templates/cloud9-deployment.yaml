@@ -19,15 +19,15 @@ spec:
       - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         name: {{ .Release.Name }}
         env:
-        - name: "TZ"
-          value: "Europe/Paris"
-        - name: "PUID"
-          value: "1000"
-        - name: "PGID"
-          value: "1000"
+        - name: TZ
+          value: Europe/Paris
+        - name: PUID
+          value: 1000
+        - name: PGID
+          value: 1000
         volumeMounts:
-        - mountPath: "/code"
-          name: "vol1"
+        - mountPath: /code
+          name: vol1
       volumes:
         - hostPath:
             path: "/apps"

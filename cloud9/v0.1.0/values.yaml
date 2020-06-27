@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   repository: "linuxserver/cloud9"
-  tag: "latest"
+  tag: "amd64-latest"
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP

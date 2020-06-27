@@ -9,6 +9,6 @@ spec:
   - name: port-2
     port: {{ .Values.service.port }}
     protocol: TCP
-    targetPort: 8000
+    targetPort: {{ .Values.service.port }}
   selector:
     app: {{ .Release.Name }}

@@ -4,6 +4,7 @@ metadata:
   labels:
     app: {{ .Release.Name }}
   name: {{ .Chart.Name }}
+  namespace: cocooning
 spec:
   replicas: 1
   selector:
@@ -28,7 +29,6 @@ spec:
         - mountPath: /config
           name: vol1
       nodeName: ubunturpi4
-      namespace: cocooning
       volumes:
         - configMap:
             defaultMode: 256

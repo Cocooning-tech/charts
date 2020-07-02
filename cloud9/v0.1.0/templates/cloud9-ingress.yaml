@@ -2,12 +2,13 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ .Chart.Name }}
+  namespace: cocooning
 spec:
   rules:
   - host: "verdun.cocooning.tech"
     http:
       paths:
-      - path: 
+      - path:
         backend:
           serviceName: {{ .Chart.Name }}
           servicePort: {{ .Values.service.port }}

@@ -11,4 +11,4 @@ spec:
     protocol: TCP
     targetPort: {{ .Values.service.port }}
   selector:
-    app: {{ .Chart.Name }}
+    app: {{ .Release.Name }}

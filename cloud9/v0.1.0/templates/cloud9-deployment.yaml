@@ -28,6 +28,7 @@ spec:
         volumeMounts:
         - mountPath: "/code"
           name: "vol1"
+      nodeName: ubunturpi4
       volumes:
         - hostPath:
             path: "/apps"

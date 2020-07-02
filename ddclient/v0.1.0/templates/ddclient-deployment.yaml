@@ -29,9 +29,9 @@ spec:
         - mountPath: /config
           name: vol1
       nodeName: ubunturpi4
-    volumes:
-      - configMap:
-          defaultMode: 256
-          name: ddclientconf
-          optional: false
-        name: vol1
+      volumes:
+        - configMap:
+            defaultMode: 256
+            name: ddclientconf
+            optional: false
+          name: vol1

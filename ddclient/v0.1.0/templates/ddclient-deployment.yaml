@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: {{ .Release.Name }}
+  name: {{ .Chart.Name }}
+  namespace: {{ .Release.Name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+      - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        name: {{ .Chart.Name }}
+        env:
+        - name: "TZ"
+          value: "Europe/Paris"
+        - name: "PUID"
+          value: "1000"
+        - name: "PGID"
+          value: "1000"
+        volumeMounts:
+        - mountPath: "/config"
+          name: "vol1"
+      volumes:
+        - hostPath:
+            path: "/apps/ddclient"
+            type: ""
+          name: "vol1"

@@ -27,7 +27,8 @@ spec:
           value: "1000"
         volumeMounts:
         - name: config-volume
-          mountPath: /config
+          mountPath: ddclient.conf
+      nodeName: ubunturpi4
       volumes:
         - name: config-volume
           configMap:

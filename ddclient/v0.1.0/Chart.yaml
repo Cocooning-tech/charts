@@ -6,7 +6,7 @@ version: 0.1.0
 keywords:
 - ddclient
 home: https://github.com/Cocooning-tech/charts
-icon: https://upload.wikimedia.org/wikipedia/commons/b/b9/Emoji_u1f504.svg
+icon: https://https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/ddclient-logo.png
 sources:
   - https://github.com/Cocooning-tech/charts
 maintainers:

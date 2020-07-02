@@ -26,12 +26,12 @@ spec:
         - name: "PGID"
           value: "1000"
         volumeMounts:
-        - name: config-volume
-          mountPath: ddclient.conf
+        - mountPath: /config
+          name: vol1
       nodeName: ubunturpi4
-      volumes:
-        - name: config-volume
-          configMap:
-            # Provide the name of the ConfigMap containing the files you want
-            # to add to the container
-            name: ddclient
+    volumes:
+      - configMap:
+          defaultMode: 256
+          name: ddclientconf
+          optional: false
+        name: vol1

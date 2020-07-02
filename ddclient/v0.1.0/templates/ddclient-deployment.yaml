@@ -25,11 +25,12 @@ spec:
           value: "1000"
         - name: "PGID"
           value: "1000"
-        volumeMounts:
-        - mountPath: "/config"
-          name: "vol1"
-      volumes:
-        - hostPath:
-            path: "/apps/ddclient"
-            type: ""
-          name: "vol1"
+      volumeMounts:
+      - name: config-volume
+        mountPath: /config
+  volumes:
+    - name: config-volume
+      configMap:
+        # Provide the name of the ConfigMap containing the files you want
+        # to add to the container
+        name: ddclient.conf

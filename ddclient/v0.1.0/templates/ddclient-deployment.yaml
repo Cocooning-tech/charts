@@ -28,7 +28,7 @@ spec:
         - mountPath: /config
           name: vol1
       nodeName: ubunturpi4
-      namespace: "cocooning"
+      namespace: cocooning
       volumes:
         - configMap:
             defaultMode: 256

@@ -7,7 +7,7 @@ keywords:
 - cloud9
 - ide
 home: https://github.com/Cocooning-tech/charts
-icon: https://upload.wikimedia.org/wikipedia/commons/f/f7/Cloud9_logo.svg
+icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/cloud9.png
 sources:
   - https://github.com/Cocooning-tech/charts
 maintainers:

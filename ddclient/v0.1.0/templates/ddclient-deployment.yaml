@@ -28,7 +28,6 @@ spec:
         volumeMounts:
         - mountPath: /config
           name: vol1
-      nodeName: ubunturpi4
       volumes:
         - configMap:
             defaultMode: 256

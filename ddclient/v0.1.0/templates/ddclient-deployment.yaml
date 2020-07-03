@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Chart.Name }}
-  namespace: cocooning
   labels:
     app: {{ .Release.Name }}
+  name: {{ .Chart.Name }}
+  namespace: cocooning
 spec:
   replicas: 1
   selector:

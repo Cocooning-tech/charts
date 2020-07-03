@@ -4,7 +4,6 @@ metadata:
   labels:
     app: {{ .Release.Name }}
   name: {{ .Chart.Name }}
-  namespace: default
 spec:
   ports:
   - name: port-1

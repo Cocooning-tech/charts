@@ -29,3 +29,8 @@ spec:
         - mountPath: "/code"
           name: cloudvol
       nodeName: ubunturpi4
+      volumes:
+        - hostPath:
+            path: "/apps"
+            type: ""
+          name: cloudvol

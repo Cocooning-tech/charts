@@ -27,9 +27,9 @@ spec:
           value: "1000"
         volumeMounts:
         - mountPath: "/code"
-          name: cloudvol
+          name: pvccloud
       volumes:
         - hostPath:
             path: "/apps"
             type: ""
-          name: cloudvol
+          name: pvccloud

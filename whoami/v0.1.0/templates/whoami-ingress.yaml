@@ -1,8 +1,6 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  labels:
-    app: {{ .Release.Name }}
   name: {{ .Chart.Name }}
 spec:
   rules:

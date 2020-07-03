@@ -1,0 +1,61 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    field.cattle.io/publicEndpoints: '[{"addresses":["192.168.1.71"],"port":80,"protocol":"HTTP","serviceName":"whoami-p-h827m:whoami","ingressName":"whoami-p-h827m:whoami","hostname":"verdun.cocooning.tech","path":"/whoami","allNodes":false}]'
+    meta.helm.sh/release-name: whoami-p-h827m
+    meta.helm.sh/release-namespace: whoami-p-h827m
+  creationTimestamp: "2020-07-03T07:33:59Z"
+  generation: 1
+  labels:
+    app: whoami-p-h827m
+    app.kubernetes.io/managed-by: Helm
+    io.cattle.field/appId: whoami-p-h827m
+  managedFields:
+  - apiVersion: extensions/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:field.cattle.io/publicEndpoints: {}
+          f:meta.helm.sh/release-name: {}
+          f:meta.helm.sh/release-namespace: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:io.cattle.field/appId: {}
+      f:spec:
+        f:rules: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2020-07-03T07:33:59Z"
+  - apiVersion: extensions/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:loadBalancer:
+          f:ingress: {}
+    manager: traefik
+    operation: Update
+    time: "2020-07-03T07:33:59Z"
+  name: whoami
+  namespace: whoami-p-h827m
+  resourceVersion: "70491"
+  selfLink: /apis/extensions/v1beta1/namespaces/whoami-p-h827m/ingresses/whoami
+  uid: ad67042f-96be-4a00-99e6-95624955b010
+spec:
+  rules:
+  - host: verdun.cocooning.tech
+    http:
+      paths:
+      - backend:
+          serviceName: whoami
+          servicePort: 80
+        path: /whoami
+        pathType: ImplementationSpecific
+status:
+  loadBalancer:
+    ingress:
+    - ip: 192.168.1.71

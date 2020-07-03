@@ -4,7 +4,6 @@ metadata:
   labels:
     app: {{ .Release.Name }}
   name: {{ .Chart.Name }}
-  io.cattle.field/appId: {{ .Release.Name }}
 spec:
   rules:
   - host: "verdun.cocooning.tech"

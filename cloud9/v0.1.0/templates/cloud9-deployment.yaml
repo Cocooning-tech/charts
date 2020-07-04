@@ -31,4 +31,4 @@ spec:
       volumes:
       - name: vol1
         persistentVolumeClaim:
-          claimName: pvccloud
+          claimName: pvc-cocooning

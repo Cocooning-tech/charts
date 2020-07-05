@@ -4,9 +4,6 @@ metadata:
   labels:
     app: {{ .Chart.Name }}
   name: {{ .Chart.Name }}
-  namespace: cocooning
-  annotations:
-    meta.helm.sh/release-namespace: cocooning
 spec:
   replicas: 1
   selector:

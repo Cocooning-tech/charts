@@ -2,9 +2,6 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ .Chart.Name }}
-  namespace: cocooning
-  annotations:
-    meta.helm.sh/release-namespace: cocooning
 spec:
   rules:
   - host: "verdun.cocooning.tech"

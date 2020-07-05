@@ -16,6 +16,7 @@ spec:
     metadata:
       labels:
         app: {{ .Chart.Name }}
+      namespace: cocooning
     spec:
       containers:
       - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"

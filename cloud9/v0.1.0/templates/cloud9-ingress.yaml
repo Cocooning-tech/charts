@@ -5,7 +5,7 @@ metadata:
   namespace: cocooning
   annotations:
     kubernetes.io/ingress.class: traefik
-    traefik.ingress.kubernetes.io/rewrite-target: /ide.html
+    traefik.ingress.kubernetes.io/rewrite-target: /test
 spec:
   rules:
   - host: "verdun.cocooning.tech"

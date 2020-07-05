@@ -6,7 +6,6 @@ metadata:
   name: {{ .Chart.Name }}
   targetNamespace: cocooning
 spec:
-  targetNamespace: cocooning
   replicas: 1
   selector:
     matchLabels:

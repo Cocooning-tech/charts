@@ -4,7 +4,6 @@ metadata:
   name: {{ .Chart.Name }}
   targetNamespace: cocooning
 spec:
-  targetNamespace: cocooning
   rules:
   - host: "verdun.cocooning.tech"
     http:

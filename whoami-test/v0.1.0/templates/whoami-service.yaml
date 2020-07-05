@@ -6,7 +6,6 @@ metadata:
   name: {{ .Chart.Name }}
   targetNamespace: cocooning
 spec:
-  targetNamespace: cocooning
   ports:
   - name: port-1
     port: {{ .Values.service.port }}

@@ -4,7 +4,6 @@ metadata:
   labels:
     app: {{ .Chart.Name }}
   name: {{ .Chart.Name }}
-  targetNamespace: cocooning
 spec:
   ports:
   - name: port-1

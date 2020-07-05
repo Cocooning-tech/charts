@@ -2,7 +2,6 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ .Chart.Name }}
-  targetNamespace: cocooning
 spec:
   rules:
   - host: "verdun.cocooning.tech"

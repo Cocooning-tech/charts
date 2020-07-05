@@ -1,7 +1,7 @@
 apiVersion: v1
 appVersion: 0.110.0
-description: whoami
-name: whoami
+description: whoamitest
+name: whoamitest
 version: 0.1.0
 keywords:
 - whoami

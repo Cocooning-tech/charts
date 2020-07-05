@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ .Release.Name }}
+  name: {{ .Chart.Name }}
 spec:
   rules:
   - host: "verdun.cocooning.tech"
@@ -9,5 +9,5 @@ spec:
       paths:
       - path: /whoami
         backend:
-          serviceName: {{ .Release.Name }}
+          serviceName: {{ .Chart.Name }}
           servicePort: {{ .Values.service.port }}

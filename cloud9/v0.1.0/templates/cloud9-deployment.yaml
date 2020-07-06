@@ -4,7 +4,6 @@ metadata:
   labels:
     app: {{ .Chart.Name }}
   name: {{ .Chart.Name }}
-  namespace: cocooning
 spec:
   replicas: 1
   selector:
@@ -27,8 +26,9 @@ spec:
           value: "1000"
         volumeMounts:
         - mountPath: "/code"
-          name: vol1
+          name: "vol1"
       volumes:
-      - name: vol1
-        persistentVolumeClaim:
-          claimName: pvc-cocooning
+        - hostPath:
+            path: "/apps"
+            type: ""
+          name: "vol1"

@@ -25,6 +25,7 @@ spec:
           value: "1000"
         - name: "PGID"
           value: "1000"
+
         volumeMounts:
         - mountPath: "/code"
           name: "vol1"
@@ -33,3 +34,11 @@ spec:
             path: "/apps"
             type: ""
           name: "vol1"
+
+        volumeMounts:
+        - mountPath: "/code"
+          name: vol1
+      volumes:
+      - name: vol1
+        persistentVolumeClaim:
+          claimName: pvc-cocooning

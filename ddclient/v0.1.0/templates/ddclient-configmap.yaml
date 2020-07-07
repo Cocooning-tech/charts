@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: configMap
+metadata:
+  name: ddclient.conf
+data:
+  ddclient.conf: |-
+    daemon=300
+    syslog=yes
+    pid=/var/run/ddclient/ddclient.pid
+    ssl=yes
+    protocol=dyndns2
+    use=web, web=checkip.dyndns.com
+    server=www.ovh.com
+    login=cocooning.tech-verdun
+    password=OaVaH7579
+    verdun.cocooning.tech

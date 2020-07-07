@@ -4,9 +4,9 @@ metadata:
   name: {{ .Chart.Name }}
   annotations:
     kubernetes.io/ingress.class: traefik
-    traefik.frontend.redirect.permanent: true
-    traefik.frontend.redirect.regex: https://verdun.cocooning.tech/cloud9/
-    traefik.frontend.redirect.replacement: https://verdun.cocooning.tech/ide.html
+    traefik.frontend.redirect.permanent: "true"
+    traefik.frontend.redirect.regex: "https://verdun.cocooning.tech/cloud9/"
+    traefik.frontend.redirect.replacement: "https://verdun.cocooning.tech/ide.html"
 spec:
   rules:
   - host: "verdun.cocooning.tech"

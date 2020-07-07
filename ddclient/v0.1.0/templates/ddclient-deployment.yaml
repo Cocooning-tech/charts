@@ -30,6 +30,6 @@ spec:
       volumes:
         - configMap:
             defaultMode: 256
-            name: ddclientconf
+            name: ddclient-configmap
             optional: false
           name: vol1

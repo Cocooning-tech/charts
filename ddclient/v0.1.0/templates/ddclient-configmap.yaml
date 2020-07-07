@@ -1,9 +1,10 @@
 apiVersion: v1
-kind: configMap
+kind: ConfigMap
 metadata:
-  name: ddclient.conf
+  name: ddclient-configmap
 data:
   ddclient.conf: |-
+    message = Hello from config 1
     daemon=300
     syslog=yes
     pid=/var/run/ddclient/ddclient.pid

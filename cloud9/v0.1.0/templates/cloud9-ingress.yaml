@@ -11,8 +11,8 @@ spec:
   rules:
   - host: "verdun.cocooning.tech"
     http:
-      paths: /
-      - path:
+      paths:
+      - path: /
         backend:
           serviceName: {{ .Chart.Name }}
           servicePort: {{ .Values.service.port }}

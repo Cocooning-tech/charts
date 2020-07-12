@@ -64,7 +64,7 @@ sudo netplan apply
 #### Changer le hostname
 <pre><code>nano /etc/hostname
 </code></pre>
-Changer le hostname e, fonction du type de noeud
+Changer le hostname en fonction du type de noeud
 <pre><code>cl-1-master-1
 </code></pre>
 <pre><code>cl-1-worker-1
@@ -78,5 +78,11 @@ Changer le hostname e, fonction du type de noeud
 #### Mettre à jour la date
 A faire
 ## Installation de k3s
-### Mode normal
-### Mode Hight...
+### Mode single node master sans etcd
+#### Installation du master node
+<pre><code>curl -sfL https://get.k3s.io | sh -s - --token tokendetestoauat7579
+</code></pre>
+#### Installation d'un worker node
+<pre><code>sudo k3s agent --server https://192.168.1.71:6443 --token tokendetestoauat7579
+</code></pre>
+### Mode High Availability with Embedded DB (Experimental) avec etcd

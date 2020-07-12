@@ -4,11 +4,13 @@
 #### Gravure sur SD
 Graver une version de l'image disque sur SD card (Balena)
 * version __ubuntu-20.04-server__
-* version __ubuntu-18.04-server__  
+* version __ubuntu-18.04-server__
+
 Ejecter et rebrancher le lecteur/graveur USB  
 Modifier le fichier
 * __cmdline.txt__ sur __ubuntu-20.04-server__
 * __nobtcmd.txt__ sur __ubuntu-18.04-server__
+
 Ajouter en fin de ligne
 <pre><code>cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
 </code></pre>

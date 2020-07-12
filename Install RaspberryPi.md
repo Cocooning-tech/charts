@@ -68,8 +68,7 @@ Changer le hostname
 
 >Les hostname de chaque noeud du cluster doivent être différents
 
-<pre><code>
-reboot
+<pre><code>reboot
 </code></pre>
 
 #### Mettre à jour la date

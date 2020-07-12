@@ -80,9 +80,11 @@ A faire
 ## Installation de k3s
 ### Mode single node master sans etcd
 #### Installation du master node
-<pre><code>curl -sfL https://get.k3s.io | sh -s - --token tokendetestoauat7579
+<pre><code>sudo su
+curl -sfL https://get.k3s.io | sh -s - --token tokendetestoauat7579
 </code></pre>
 #### Installation d'un worker node
-<pre><code>sudo k3s agent --server https://192.168.1.71:6443 --token tokendetestoauat7579
+<pre><code>sudo su
+curl -sfL https://get.k3s.io | K3S_URL=https://192.168.1.71:6443 K3S_TOKEN=tokendetestoauat7579 sh -
 </code></pre>
 ### Mode High Availability with Embedded DB (Experimental) avec etcd

@@ -1,7 +1,7 @@
 # Installation d'un Raspberry Pi 3 et 4
 ## Installation de l'OS
 ### Installation d'ubuntu server
-#### Gravure sur SD
+#### Gravure et insertion de la SD
 Graver une version de l'image disque sur SD card (Balena)
 * version __ubuntu-20.04-server__
 * version __ubuntu-18.04-server__
@@ -18,7 +18,7 @@ Ajouter en fin de ligne
 >Voir si d'autres config sont possibles à ce niveau (WIFI...)
 
 Ejecter la clé  
-Insérer la clef dans le nano
+Insérer la clef dans le nano  
 Se connecter en filaire (RJ45)  
 Brancher l'alimentation
 #### Première connection en SSH
@@ -71,6 +71,9 @@ Changer le hostname
 <pre><code>
 reboot
 </code></pre>
+
+#### Mettre à jour la date
+A faire
 ## Installation de k3s
 ### Mode normal
 ### Mode Hight...

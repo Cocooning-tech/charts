@@ -64,7 +64,11 @@ sudo netplan apply
 #### Changer le hostname
 <pre><code>nano /etc/hostname
 </code></pre>
-Changer le hostname
+Changer le hostname e, fonction du type de noeud
+<pre><code>cl-1-master-1
+</code></pre>
+<pre><code>cl-1-worker-1
+</code></pre>
 
 >Les hostname de chaque noeud du cluster doivent être différents
 

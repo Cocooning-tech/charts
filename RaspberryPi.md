@@ -77,6 +77,9 @@ Changer le hostname en fonction du type de noeud
 
 #### Mettre à jour la date
 A faire
+### Installation de dietpi
+### Installation d'hypriot
+
 ## Installation de k3s
 ### Mode single node master sans etcd
 #### Installation du master node
@@ -88,3 +91,26 @@ curl -sfL https://get.k3s.io | sh -s - --token tokendetestoauat7579
 curl -sfL https://get.k3s.io | K3S_URL=https://192.168.1.71:6443 K3S_TOKEN=tokendetestoauat7579 sh -
 </code></pre>
 ### Mode High Availability with Embedded DB (Experimental) avec etcd
+
+## Montage d'un volume NFS sur le master node
+### Cration du server NFS
+<pre><code>sudo su
+apt-get install nfs-kernel-server
+mkdir -p /apps && chown nobody:nogroup /apps
+</code></pre>
+Créez une table d'export NFS
+<pre><code>nano /etc/exports
+</code></pre>
+Copier coller le chemin ci-dessous
+<pre><code>/apps 192.168.1.71(rw,sync,no_subtree_check) 192.168.1.69(rw,sync,no_subtree_check)
+</code></pre>
+Mettre à jour la table nfs
+<pre><code>exportfs -ra
+</code></pre>
+Ouvrez les ports utilisés par NFS.
+Pour savoir quels ports NFS utilise, entrez la commande suivante:
+<pre><code>rpcinfo -p | grep nfs
+</code></pre>
+Ouvrez les ports générés par la commande précédente.
+<pre><code>sudo ufw allow 2049
+</code></pre>

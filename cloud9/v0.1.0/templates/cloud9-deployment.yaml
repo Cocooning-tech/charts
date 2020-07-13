@@ -27,8 +27,12 @@ spec:
         volumeMounts:
         - mountPath: "/code"
           name: "vol1"
+#      volumes:
+#        - hostPath:
+#            path: "/apps"
+#            type: ""
+#          name: "vol1"
       volumes:
-        - hostPath:
-            path: "/apps"
-            type: ""
-          name: "vol1"
+      - name: pvcapps
+        persistentVolumeClaim:
+          claimName: pvcapps

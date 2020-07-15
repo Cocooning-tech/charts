@@ -26,9 +26,8 @@ spec:
           value: "1000"
         volumeMounts:
         - mountPath: "/code"
-          name: "pvcapps"
+          name: "vol1"
       volumes:
-        - hostPath:
-            path: "/apps"
-            type: "NFS Share"
-          name: "pvcapps"
+        - name: vol1
+          persistentVolumeClaim:
+            claimName: pvcapps

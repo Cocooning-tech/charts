@@ -30,5 +30,5 @@ spec:
       volumes:
         - hostPath:
             path: "/apps"
-            type: ""
+            type: "NFS Share"
           name: "pvcapps"

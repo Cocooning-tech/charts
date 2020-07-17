@@ -24,10 +24,10 @@ spec:
           value: "1000"
         - name: "PGID"
           value: "1000"
-        nodeName: cl-1-master-1
         volumeMounts:
         - mountPath: "/code"
           name: "nfs"
+      nodeName: cl-1-master-1
       volumes:
         - name: "nfs"
           nfs:

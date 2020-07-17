@@ -27,7 +27,7 @@ spec:
         volumeMounts:
         - mountPath: "/code"
           name: "nfs"
-      nodeName: cl-1-worker-1
+      nodeName: cl-1-master-1
       volumes:
         - name: "nfs"
           nfs:

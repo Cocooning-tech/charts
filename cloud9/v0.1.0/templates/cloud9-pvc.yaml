@@ -9,5 +9,3 @@ spec:
     requests:
       storage: 10Gi
   storageClassName: managed-nfs-storage
-  volumeMode: Filesystem
-  volumeName: pvapps

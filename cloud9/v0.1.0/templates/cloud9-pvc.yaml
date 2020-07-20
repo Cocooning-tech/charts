@@ -9,3 +9,4 @@ spec:
     requests:
       storage: 5Gi
   storageClassName: managed-nfs-storage
+  volumeName: pv

@@ -1,6 +1,7 @@
 replicaCount: 1
 image:
-  repository: "linuxserver/cloud9"
+  repository: "mstev0du/cloud9-ide"
+  # repository: "linuxserver/cloud9"
   tag: "latest"
   pullPolicy: IfNotPresent
 service:

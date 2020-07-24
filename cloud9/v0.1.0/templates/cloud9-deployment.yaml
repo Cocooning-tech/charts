@@ -27,7 +27,9 @@ spec:
         volumeMounts:
         - mountPath: "/code"
           name: "nfs"
-      volumes:
-        - name: "nfs"
-          persistentVolumeClaim:
-            claimName: pvcapps
+     volumes:
+       - name: nfs
+         nfs:
+           # URL for the NFS server
+           server: 192.168.0.1
+           path: /apps

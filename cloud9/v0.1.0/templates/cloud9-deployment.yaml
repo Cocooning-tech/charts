@@ -27,9 +27,11 @@ spec:
         volumeMounts:
         - mountPath: "/code"
           name: "vol1"
-     volumes:
-       - name: vol1
-     nfs:
-       # URL for the NFS server
-       server: 192.168.1.71
-       path: /apps
+        volumes:
+          - name: "vol1"
+            nfs:
+              # Use real NFS server address here.
+              server: 192.168.1.71
+              # Use real NFS server export directory.
+              path: "/apps"
+              readOnly: false

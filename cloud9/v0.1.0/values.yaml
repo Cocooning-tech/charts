@@ -1,6 +1,7 @@
 replicaCount: 1
 image:
-  repository: "lsiobase/cloud9"
+  repository: "lspipepr/cloud9"
+  # repository: "lsiobase/cloud9"
   # repository: "linuxserver/cloud9"
   tag: "latest"
   pullPolicy: IfNotPresent

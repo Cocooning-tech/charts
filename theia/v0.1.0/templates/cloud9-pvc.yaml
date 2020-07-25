@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvcapps
+spec:
+  accessModes:
+  - ReadWriteMany
+  - ReadWriteOnce
+  - ReadOnlyMany
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: managed-nfs-storage
+  volumeName: pvapps

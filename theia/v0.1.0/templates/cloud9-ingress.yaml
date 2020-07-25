@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ .Chart.Name }}
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/redirect-permanent: "true"
+    traefik.ingress.kubernetes.io/redirect-regex: "https://verdun.cocooning.tech/cloud9/"
+    traefik.ingress.kubernetes.io/redirect-replacement: "https://verdun.cocooning.tech/ide.html"
+spec:
+  rules:
+  - host: "verdun.cocooning.tech"
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: {{ .Chart.Name }}
+          servicePort: {{ .Values.service.port }}

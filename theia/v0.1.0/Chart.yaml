@@ -1,0 +1,15 @@
+apiVersion: v1
+appVersion: 0.110.0
+description: Theia
+name: theia
+version: 0.1.0
+keywords:
+- theia
+- ide
+home: https://github.com/Cocooning-tech/charts
+#icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/cloud9.png
+sources:
+  - https://github.com/Cocooning-tech/charts
+maintainers:
+- name: tchube
+  email: jp.tchube@cocooning.tech

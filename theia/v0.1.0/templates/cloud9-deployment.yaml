@@ -17,17 +17,10 @@ spec:
       containers:
       - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         name: {{ .Chart.Name }}
-        env:
-        - name: "TZ"
-          value: "Europe/Paris"
-        - name: "PUID"
-          value: "1000"
-        - name: "PGID"
-          value: "1000"
         volumeMounts:
-        - mountPath: "/code"
+        - mountPath: "/home/project:cached"
           name: "nfs"
       volumes:
         - name: "nfs"
           persistentVolumeClaim:
-            claimName: pvcapps
+            claimName: pvctheia

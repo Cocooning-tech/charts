@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pvcapps
+  name: pvctheia
 spec:
   accessModes:
   - ReadWriteMany
@@ -11,4 +11,4 @@ spec:
     requests:
       storage: 5Gi
   storageClassName: managed-nfs-storage
-  volumeName: pvapps
+  volumeName: pvtheia

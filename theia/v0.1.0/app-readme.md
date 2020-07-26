@@ -1,3 +1,3 @@
-# Cloud9
+# Theia
 
 Cocooning app-readme.md

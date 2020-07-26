@@ -5,8 +5,8 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: traefik
     traefik.ingress.kubernetes.io/redirect-permanent: "true"
-    traefik.ingress.kubernetes.io/redirect-regex: "https://verdun.cocooning.tech/cloud9/"
-    traefik.ingress.kubernetes.io/redirect-replacement: "https://verdun.cocooning.tech/ide.html"
+    traefik.ingress.kubernetes.io/redirect-regex: "https://verdun.cocooning.tech/theia/"
+    traefik.ingress.kubernetes.io/redirect-replacement: "https://verdun.cocooning.tech/workspace/theia"
 spec:
   rules:
   - host: "verdun.cocooning.tech"

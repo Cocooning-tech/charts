@@ -1,6 +1,6 @@
 replicaCount: 1
 image:
-  repository: "octoberlan/theia"
+  repository: "gashirar/theia-kubernetes"
   tag: "latest"
   pullPolicy: IfNotPresent
 service:

@@ -17,6 +17,3 @@ spec:
       containers:
       - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         name: {{ .Chart.Name }}
-        env:
-        - name: USER
-        - name: PASSWORD

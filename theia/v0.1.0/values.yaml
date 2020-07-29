@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
-  repository: "gashirar/theia-kubernetes"
-  tag: "latest"
+  repository: "land007/theia"
+  tag: "arm"
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP

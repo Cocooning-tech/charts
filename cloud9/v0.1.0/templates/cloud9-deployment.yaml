@@ -20,6 +20,10 @@ spec:
         env:
         - name: "TZ"
           value: "Europe/Paris"
+        - name: "PUID"
+          value: "1000"
+        - name: "PGID"
+          value: "1000"
         volumeMounts:
         - mountPath: "/code"
           name: "nfs"

@@ -20,16 +20,18 @@ spec:
         volumeMounts:
         - mountPath: "/home/project"
           name: "vol1"
-      volumes:
-        - hostPath:
-            path: "/apps"
-            type: ""
-          name: "vol1"
-      schedulerName: default-scheduler
-#        volumeMounts:
-#        - mountPath: "/home/project"
-#          name: "nfs"
 #      volumes:
-#        - name: "nfs"
-#          persistentVolumeClaim:
-#            claimName: "pvctheia"
+#        - hostPath:
+#            path: "/apps"
+#            type: ""
+#          name: "vol1"
+#      schedulerName: default-scheduler
+
+        volumeMounts:
+        - mountPath: "/home/project"
+          name: "vol1"
+      volumes:
+        - name: "vol1"
+          persistentVolumeClaim:
+            claimName: "pvctheia"
+      schedulerName: default-scheduler

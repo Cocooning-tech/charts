@@ -30,4 +30,4 @@ spec:
       volumes:
         - name: "nfs"
           persistentVolumeClaim:
-            claimName: pvcapps
+            claimName: nfs-pvc

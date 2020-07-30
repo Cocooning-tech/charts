@@ -23,7 +23,7 @@ spec:
       volumes:
         - hostPath:
             path: "/apps"
-            type: ""
+            type: Directory
           name: "vol1"
       schedulerName: default-scheduler
 #        volumeMounts:
@@ -32,4 +32,4 @@ spec:
 #      volumes:
 #        - name: "nfs"
 #          persistentVolumeClaim:
-#            claimName: pvctheia
+#            claimName: "pvctheia"

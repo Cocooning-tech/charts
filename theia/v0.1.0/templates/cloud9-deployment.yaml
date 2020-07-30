@@ -22,7 +22,7 @@ spec:
           name: "vol1"
       volumes:
         - hostPath:
-            path: "/home/ubuntu"
+            path: "/apps"
             type: ""
           name: "vol1"
       schedulerName: default-scheduler

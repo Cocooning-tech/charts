@@ -3,7 +3,7 @@ image:
   repository: "lspipepr/cloud9"
   # repository: "lsiobase/cloud9"
   # repository: "linuxserver/cloud9"
-  tag: "latest"
+  tag: "go"
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP

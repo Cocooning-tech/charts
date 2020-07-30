@@ -23,7 +23,7 @@ spec:
       volumes:
         - hostPath:
             path: "/apps"
-            type: Directory
+            type: ""
           name: "vol1"
       schedulerName: default-scheduler
 #        volumeMounts:

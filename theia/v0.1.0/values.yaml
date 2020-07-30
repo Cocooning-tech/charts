@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   repository: "land007/theia"
-  tag: "arm"
+  tag: "arm7"
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP

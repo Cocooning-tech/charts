@@ -18,7 +18,7 @@ spec:
       - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         name: {{ .Chart.Name }}
         volumeMounts:
-        - mountPath: "/home/project:cached"
+        - mountPath: "/home/project"
           name: "vol1"
       volumes:
         - hostPath:

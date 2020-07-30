@@ -1,9 +1,9 @@
 replicaCount: 1
 image:
-  repository: "lspipepr/cloud9"
+  repository: "lsiobase/cloud9"
   # repository: "lsiobase/cloud9"
   # repository: "linuxserver/cloud9"
-  tag: "go"
+  tag: "latest"
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP

@@ -19,8 +19,17 @@ spec:
         name: {{ .Chart.Name }}
         volumeMounts:
         - mountPath: "/home/project"
-          name: "nfs"
-      volumes:
-        - name: "nfs"
-          persistentVolumeClaim:
-            claimName: pvctheia
+          name: "vol1"
+    volumes:
+      - hostPath:
+          path: "/home/ubuntu"
+          type: ""
+        name: "vol1"
+    schedulerName: default-scheduler
+#        volumeMounts:
+#        - mountPath: "/home/project"
+#          name: "nfs"
+#      volumes:
+#        - name: "nfs"
+#          persistentVolumeClaim:
+#            claimName: pvctheia

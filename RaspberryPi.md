@@ -62,8 +62,10 @@ Ajouter le code
   version: 2
   ethernets:
     eth0:
-      dhcp4: true
-      optional: true
+      dhcp4: no
+      dhcp6: no
+      addresses: [192.168.1.99/24]
+      gateway4: 192.168.1.1
   wifis:
     wlan0:
       dhcp4: no

@@ -139,9 +139,10 @@ Créez une table d'export NFS
 </code></pre>
 Copier coller le chemin ci-dessous
 <pre><code>/apps 192.168.1.100(rw,no_root_squash,sync,no_subtree_check)
-<pre><code>/apps/ddclient 192.168.1.100(rw,no_root_squash,sync,no_subtree_check)
+/apps/ddclient 192.168.1.100(rw,no_root_squash,sync,no_subtree_check)
 </code></pre>
 > Créer autant de ligne que de répertoire à partager  
+
 Mettre à jour la table nfs
 <pre><code>exportfs -ra
 </code></pre>

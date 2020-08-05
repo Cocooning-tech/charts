@@ -153,7 +153,9 @@ Ouvrez les ports générés par la commande précédente.
 Relancer le service
 <pre><code>sudo service nfs-kernel-server reload
 </code></pre>
-### Montage du volume dans un serice docker
+
+### Montage du volume cocooning-nfs dans une stack
+> utiliser à minima la version 3.2 sous docker-compose.yaml
 <pre><code>services:
   rsyslog:
     image: xxxx/yyyy:latest

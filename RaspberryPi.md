@@ -138,8 +138,10 @@ Créez une table d'export NFS
 <pre><code>nano /etc/exports
 </code></pre>
 Copier coller le chemin ci-dessous
-<pre><code>/apps 192.168.1.100(rw,all_squash,sync,no_subtree_check)
+<pre><code>/apps 192.168.1.100(rw,no_root_squash,sync,no_subtree_check)
+<pre><code>/apps/ddclient 192.168.1.100(rw,no_root_squash,sync,no_subtree_check)
 </code></pre>
+> Créer autant de ligne que de répertoire à partager
 Mettre à jour la table nfs
 <pre><code>exportfs -ra
 </code></pre>
@@ -162,13 +164,14 @@ Relancer le service
     volumes:
       - type: volume
         source: cocooning-nfs
-        target: /config # path partage client
+        target: /config # path container
         volume:
           nocopy: true
 volumes:
   cocooning-nfs:
+    driver: local
     driver_opts:
       type: "nfs"
-      o: "addr=192.168.1.100,nolock,soft,rw"
-      device: ":/apps" # path partage server
+      o: "nfsvers=4,addr=192.168.1.100,nolock,soft,rw"
+      device: ":/apps" # path  server
 </code></pre>

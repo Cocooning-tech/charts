@@ -113,6 +113,21 @@ curl -sfL https://get.k3s.io | K3S_URL=https://192.168.1.71:6443 K3S_TOKEN=token
 </code></pre>
 ### Mode High Availability with Embedded DB (Experimental) avec etcd
 
+## Installation de docker mode swarm
+### Installation de docker
+<pre><code>sudo su
+apt-get install docker.io
+apt-get install docker-compose
+</code></pre>
+#### Installation du master node swarm
+<pre><code>sudo su
+docker swarm init --advertise-addr 192.168.1.100
+</code></pre>
+#### Installation d'un worker node swarm
+<pre><code>sudo su
+docker swarm join --token SWMTKN-1-5hl326l7hpupez8d3qm1w1mt0pa05jwjx0b1i214f6nysrw8ik-aacgqs4m56l4bitl2iy2b1pu9 192.168.1.100:2377
+</code></pre>
+
 ## Montage d'un volume NFS sur le master node
 ### Cration du server NFS
 <pre><code>sudo su
@@ -123,7 +138,7 @@ Créez une table d'export NFS
 <pre><code>nano /etc/exports
 </code></pre>
 Copier coller le chemin ci-dessous
-<pre><code>/apps 192.168.1.71(rw,sync,no_subtree_check) 192.168.1.69(rw,sync,no_subtree_check)
+<pre><code>/apps 192.168.1.100(rw,all_squash,sync,no_subtree_check)
 </code></pre>
 Mettre à jour la table nfs
 <pre><code>exportfs -ra

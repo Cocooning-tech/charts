@@ -156,12 +156,12 @@ Ouvrez les ports générés par la commande précédente.
     image: xxxx/yyyy:latest
     volumes:
       - type: volume
-        source: nfs
+        source: cocooning-nfs
         target: /apps # path partage client
         volume:
           nocopy: true
 volumes:
-  example:
+  cocooning-nfs:
     driver_opts:
       type: "nfs"
       o: "addr=192.168.1.100,nolock,soft,rw"

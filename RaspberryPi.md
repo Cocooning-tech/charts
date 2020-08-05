@@ -57,6 +57,27 @@ Ajouter le code
         "Livebox-2466":
           password: "S4TVJCQwaWZzknGibt"
 </code></pre>
+
+<pre><code>network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: true
+      optional: true
+  wifis:
+    wlan0:
+      dhcp4: no
+      dhcp6: no
+      addresses: [192.168.1.100/24]
+      gateway4: 192.168.1.1
+      nameservers:
+        addresses: [192.168.1.1, 8.8.8.8]
+      access-points:
+        "Livebox-2466":
+          password: "S4TVJCQwaWZzknGibt"
+</code></pre>
+
+
 Appliquer la configuration  
 <pre><code>sudo netplan generate
 sudo netplan apply

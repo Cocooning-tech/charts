@@ -141,7 +141,7 @@ Copier coller le chemin ci-dessous
 <pre><code>/apps 192.168.1.100(rw,no_root_squash,sync,no_subtree_check)
 <pre><code>/apps/ddclient 192.168.1.100(rw,no_root_squash,sync,no_subtree_check)
 </code></pre>
-> Créer autant de ligne que de répertoire à partager
+> Créer autant de ligne que de répertoire à partager  
 Mettre à jour la table nfs
 <pre><code>exportfs -ra
 </code></pre>
@@ -156,22 +156,5 @@ Relancer le service
 <pre><code>sudo service nfs-kernel-server reload
 </code></pre>
 
-### Montage du volume cocooning-nfs dans une stack
-> utiliser à minima la version 3.2 sous docker-compose.yaml
-<pre><code>services:
-  rsyslog:
-    image: xxxx/yyyy:latest
-    volumes:
-      - type: volume
-        source: cocooning-nfs
-        target: /config # path container
-        volume:
-          nocopy: true
-volumes:
-  cocooning-nfs:
-    driver: local
-    driver_opts:
-      type: "nfs"
-      o: "nfsvers=4,addr=192.168.1.100,nolock,soft,rw"
-      device: ":/apps" # path  server
+
 </code></pre>

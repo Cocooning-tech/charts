@@ -30,6 +30,7 @@ Mettre à jour le système
 <pre><code>sudo su
 apt-get update
 apt-get upgrade
+mkdir -p /apps && chown nobody:nogroup /apps
 </code></pre>
 
 > Sous la version 20.04 il peut être nécessaire de rebooter entre update et upgrade
@@ -132,7 +133,6 @@ docker swarm join --token SWMTKN-1-5hl326l7hpupez8d3qm1w1mt0pa05jwjx0b1i214f6nys
 ### Création du server NFS
 <pre><code>sudo su
 apt-get install nfs-kernel-server
-mkdir -p /apps && chown nobody:nogroup /apps
 </code></pre>
 Créez une table d'export NFS
 <pre><code>nano /etc/exports

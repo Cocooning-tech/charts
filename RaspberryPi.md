@@ -129,7 +129,7 @@ docker swarm join --token SWMTKN-1-5hl326l7hpupez8d3qm1w1mt0pa05jwjx0b1i214f6nys
 </code></pre>
 
 ## Montage d'un volume NFS sur le master node
-### Cration du server NFS
+### Création du server NFS
 <pre><code>sudo su
 apt-get install nfs-kernel-server
 mkdir -p /apps && chown nobody:nogroup /apps
@@ -149,4 +149,21 @@ Pour savoir quels ports NFS utilise, entrez la commande suivante:
 </code></pre>
 Ouvrez les ports générés par la commande précédente.
 <pre><code>sudo ufw allow 2049
+</code></pre>
+### Montage du volume dans un serice docker
+<pre><code>services:
+  rsyslog:
+    image: xxxx/yyyy:latest
+    volumes:
+      - type: volume
+        source: nfs
+        target: /apps # path partage client
+        volume:
+          nocopy: true
+volumes:
+  example:
+    driver_opts:
+      type: "nfs"
+      o: "addr=192.168.1.100,nolock,soft,rw"
+      device: ":/apps" # path partage server
 </code></pre>

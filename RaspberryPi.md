@@ -150,6 +150,9 @@ Pour savoir quels ports NFS utilise, entrez la commande suivante:
 Ouvrez les ports générés par la commande précédente.
 <pre><code>sudo ufw allow 2049
 </code></pre>
+Relancer le service
+<pre><code>sudo service nfs-kernel-server reload
+</code></pre>
 ### Montage du volume dans un serice docker
 <pre><code>services:
   rsyslog:
@@ -157,7 +160,7 @@ Ouvrez les ports générés par la commande précédente.
     volumes:
       - type: volume
         source: cocooning-nfs
-        target: /apps # path partage client
+        target: /config # path partage client
         volume:
           nocopy: true
 volumes:

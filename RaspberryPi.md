@@ -70,8 +70,6 @@ Ajouter le code
       dhcp6: no
       addresses: [192.168.1.100/24]
       gateway4: 192.168.1.1
-      nameservers:
-        addresses: [192.168.1.1, 8.8.8.8]
       access-points:
         "Livebox-2466":
           password: "S4TVJCQwaWZzknGibt"

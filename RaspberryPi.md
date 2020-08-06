@@ -29,6 +29,7 @@ Change le mot de passe et se reconnecter
 Mettre à jour le système
 <pre><code>sudo su
 apt-get update
+reboot # pour ubuntu 20.04
 apt-get upgrade
 mkdir -p /apps
 chown nobody:nogroup /apps

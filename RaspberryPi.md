@@ -32,13 +32,13 @@ apt-get update
 reboot # pour ubuntu 20.04
 sudo su # pour ubuntu 20.04
 apt-get upgrade
+apt-get install zip
 cd /
 wget https://codeload.github.com/Cocooning-tech/apps/zip/master
 unzip master
-mkdir -p /apps
-chown -R nobody:nogroup /apps
-chmod -R 777 /apps
-cd /apps
+chown -R nobody:nogroup /apps-master
+chmod -R 777 /apps-master
+cd /apps-master
 </code></pre>
 
 > https://github.com/Cocooning-tech/system.git à changer en fonction du repositorie
@@ -146,10 +146,12 @@ apt-get install nfs-kernel-server
 Créez une table d'export NFS
 <pre><code>nano /etc/exports
 </code></pre>
-Copier coller le chemin ci-dessous
-<pre><code>/apps 192.168.1.100(rw,no_root_squash,async,no_subtree_check)
-/apps/ddclient 192.168.1.100(rw,no_root_squash,async,no_subtree_check)
+Copier coller les chemins ci-dessous
+<pre><code>/apps-master 192.168.1.100(rw,no_root_squash,async,no_subtree_check)
+/apps-master/ddclient 192.168.1.100(rw,no_root_squash,async,no_subtree_check)
+/apps-master/homeassistant 192.168.1.100(rw,no_root_squash,async,no_subtree_check)
 </code></pre>
+
 > Créer autant de ligne que de répertoire à partager 
 > L'option async (dangereusse ?) permet de meilleures performances et le lancement de plusieurs replicas
 

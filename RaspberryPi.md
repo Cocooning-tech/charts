@@ -36,9 +36,10 @@ mkdir -p /apps
 chown nobody:nogroup /apps
 chmod -R /apps
 cd /apps
-wget 
+wget https://github.com/Cocooning-tech/system.git
 </code></pre>
 
+> https://github.com/Cocooning-tech/system.git à changer en fonction du repositorie
 > Sous la version 20.04 il peut être nécessaire de rebooter entre update et upgrade
 
 #### Activer le Wifi

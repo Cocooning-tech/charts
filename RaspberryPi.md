@@ -32,11 +32,13 @@ apt-get update
 reboot # pour ubuntu 20.04
 sudo su # pour ubuntu 20.04
 apt-get upgrade
+cd /
+wget https://codeload.github.com/Cocooning-tech/apps/zip/master
+unzip master
 mkdir -p /apps
 chown -R nobody:nogroup /apps
 chmod -R 777 /apps
 cd /apps
-wget https://github.com/Cocooning-tech/system.git
 </code></pre>
 
 > https://github.com/Cocooning-tech/system.git à changer en fonction du repositorie

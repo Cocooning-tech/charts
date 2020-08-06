@@ -72,6 +72,7 @@ Ajouter le code
           password: "S4TVJCQwaWZzknGibt"
 </code></pre>
 
+> Changer l'adresse IP selon la box et le node
 
 Appliquer la configuration  
 <pre><code>sudo netplan generate
@@ -120,7 +121,7 @@ docker swarm init --advertise-addr 192.168.1.100
 </code></pre>
 #### Installation d'un worker node swarm
 <pre><code>sudo su
-docker swarm join --token SWMTKN-1-5hl326l7hpupez8d3qm1w1mt0pa05jwjx0b1i214f6nysrw8ik-aacgqs4m56l4bitl2iy2b1pu9 192.168.1.100:2377
+docker swarm join --token SWMTKN-1-4xv6rbe2tfi91irtk6iy3uflpny4zjhh4gjvr5ij0lxhg8or4f-3c6wvopb9kgwiul62p1xabj07 192.168.1.101:2377
 </code></pre>
 
 ## Montage d'un volume NFS sur le master node

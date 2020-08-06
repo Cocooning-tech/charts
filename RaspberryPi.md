@@ -34,7 +34,7 @@ sudo su # pour ubuntu 20.04
 apt-get upgrade
 mkdir -p /apps
 chown -R nobody:nogroup /apps
-chmod -R /apps
+chmod -R 777 /apps
 cd /apps
 wget https://github.com/Cocooning-tech/system.git
 </code></pre>

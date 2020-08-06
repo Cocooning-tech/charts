@@ -138,10 +138,11 @@ Créez une table d'export NFS
 <pre><code>nano /etc/exports
 </code></pre>
 Copier coller le chemin ci-dessous
-<pre><code>/apps 192.168.1.100(rw,no_root_squash,sync,no_subtree_check)
-/apps/ddclient 192.168.1.100(rw,no_root_squash,sync,no_subtree_check)
+<pre><code>/apps 192.168.1.100(rw,no_root_squash,async,no_subtree_check)
+/apps/ddclient 192.168.1.100(rw,no_root_squash,async,no_subtree_check)
 </code></pre>
-> Créer autant de ligne que de répertoire à partager  
+> Créer autant de ligne que de répertoire à partager 
+> L'option async (dangereusse ?) permet de meilleures performances et le lancement de plusieurs replicas
 
 Mettre à jour la table nfs
 <pre><code>exportfs -ra

@@ -33,7 +33,7 @@ reboot # pour ubuntu 20.04
 sudo su # pour ubuntu 20.04
 apt-get upgrade
 mkdir -p /apps
-chown nobody:nogroup /apps
+chown -R nobody:nogroup /apps
 chmod -R /apps
 cd /apps
 wget https://github.com/Cocooning-tech/system.git

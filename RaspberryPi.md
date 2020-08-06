@@ -57,21 +57,6 @@ Ajouter le code
   version: 2
   ethernets:
     eth0:
-      dhcp4: true
-      optional: true
-  wifis:
-    wlan0:
-      dhcp4: true
-      optional: true
-      access-points:
-        "Livebox-2466":
-          password: "S4TVJCQwaWZzknGibt"
-</code></pre>
-
-<pre><code>network:
-  version: 2
-  ethernets:
-    eth0:
       dhcp4: no
       dhcp6: no
       addresses: [192.168.1.99/24]
